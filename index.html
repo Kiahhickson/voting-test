@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Have your say</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <p class="eyebrow">Community vote</p>
+      <h1 id="title">Have your say</h1>
+      <p id="question" class="lead"></p>
+      <p id="intro" class="muted"></p>
+    </header>
+
+    <div id="demo-banner" class="banner" hidden>
+      Demo mode: no backend configured, so votes are only saved in this browser.
+    </div>
+
+    <form id="vote-form" novalidate>
+      <ol class="picks" aria-label="Your ranking">
+        <li class="pick" data-rank="1"><span class="pick-num">1</span><span class="pick-label">First choice</span></li>
+        <li class="pick" data-rank="2"><span class="pick-num">2</span><span class="pick-label">Second choice</span></li>
+        <li class="pick" data-rank="3"><span class="pick-num">3</span><span class="pick-label">Third choice</span></li>
+      </ol>
+
+      <div id="options" class="options" role="group" aria-label="Options"></div>
+
+      <p id="error" class="error" role="alert" hidden></p>
+
+      <div class="actions">
+        <button type="button" id="reset" class="btn btn-ghost">Clear</button>
+        <button type="submit" id="submit" class="btn btn-primary" disabled>Submit my vote</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
